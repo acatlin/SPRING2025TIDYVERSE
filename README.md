@@ -92,7 +92,7 @@ Revision/Addition Description and Link:
   
 * Revision/Addition Description and Link:
 
-  Extended Jerald's plotly file to include another example for animating graphs
+  Extended Jerald's plotly vignette to include another example for animating graphs
   Link: Jerald_Plotly Extended.Rmd
 
 
