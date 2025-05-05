@@ -43,3 +43,55 @@ voters_df <- voters %>%
   theme_minimal()
 ```
 
+
+### Addition by Jerald Melukkaran 
+
+Here I try to plot the percentage change in states across the US map. Even though we only have data for 11 states, This is still a pretty amazing library to plot state wise data for the US. 
+  
+```{r}
+library(sf)
+library(tigris)
+
+#. Its recommended to use tigris to cache the shapefiles for better loading efficiency 
+options(tigris_use_cache = TRUE)
+
+
+# 1.Get the percentage change 
+summary_table <- voters %>%
+  filter(str_to_lower(Month) %in% c("jan", "feb", "mar", "apr")) %>%
+  group_by(Jurisdiction, Year) %>%
+  summarize(total_registered = sum(`New.registered.voters`, na.rm = TRUE), .groups = "drop") %>%
+  pivot_wider(names_from = Year, values_from = total_registered, names_prefix = "year_") %>%
+  mutate(
+    pct_change = 100 * (year_2020 - year_2016) / year_2016
+  )
+
+# 2. Getting the shapefiles
+states_sf <- states(cb = TRUE, resolution = "20m")
+
+# 3. Changing District of columbia to D.C to match the shapefile names
+summary_table <- summary_table %>%
+  mutate(state_name = case_when(
+    Jurisdiction == "D.C." ~ "District of Columbia",
+    TRUE ~ Jurisdiction
+  ))
+
+# 4. Getting only the 11 states we need
+map_data <- states_sf %>%
+  filter(NAME %in% summary_table$state_name) %>%
+  left_join(summary_table, by = c("NAME" = "state_name"))
+
+# 5: Plotting 
+ggplot(map_data) +
+  geom_sf(aes(fill = pct_change), color = "white") +
+  scale_fill_gradient2(
+    low = "red", mid = "white", high = "green",
+    midpoint = 0, name = "% Change"
+  ) +
+  theme_minimal() +
+  labs(
+    title = "Percentage Change in New Voter Registrations (2020 vs. 2016)",
+
+  )
+```
+

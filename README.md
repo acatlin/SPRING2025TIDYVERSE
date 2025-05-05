@@ -43,6 +43,8 @@ Initial Description and Link:
 Revision/Addition Description and Link:
 * The following code shows a comparison of the voter registrations by year in each jurisdiction: 
 * Voter Registration Tidyverse Sample.Rmd
+* Jerald Melukkaran :  Added a percentage change plot that shows a map of United states colored with the corresponding percentage changing using  geom_sf from library sf. link: Voter-Registration-Tidyverse-Sample.html
+
 
 
 
@@ -77,8 +79,19 @@ Revision/Addition Description and Link:
 
 
 # Md. Tanzil E.
+Chess Player Transfers to the U.S.: A Tidyverse Analysis
+In this project, I analyzed a dataset containing count data on chess players transferring their federation to the United States. 
+The goal was to visualize transfer trends over time, identify the most active federations, and highlight how transfers from less frequent federations contribute to the overall picture.
 
-* Initial Description and Link:
+Data Preparation:Using the tidyverse package in R, I cleaned and transformed the dataset to make it suitable for analysis:
+
+Removed missing or irrelevant data;Grouped transfers by year and original federation:
+Created a new category called "Other" to group less frequent federations for simplified visualization
+
+Visualization:To explore the data, I used ggplot2 to create the following visualizations:
+
+
+* Initial Description and Link:https://github.com/tanzil64/Tanzil_Tidyverse/blob/main/tanzil_Tidyverse.Rmd
 
 * Revision/Addition Description and Link:
 
@@ -87,17 +100,28 @@ Revision/Addition Description and Link:
 # Miraj P.
 
 * Initial Description and Link:
+
   Shows the use of lubridate package on nycflights13 dataset.
   Link: MP Tidyverse.Rmd
   
 * Revision/Addition Description and Link:
 
+  Extended Jerald's plotly vignette to include another example for animating graphs
+  Link: Jerald_Plotly Extended.Rmd
+
 
 # Mohammad C.
 
 * Initial Description and Link:
+* This vignette demonstrates how Plotly can animate plots to visualize the changes in game genres from 2000 to 2015, with options to play automatically or use a slider.
+  
 
 * Revision/Addition Description and Link:
+* Some descriptive analysis
+* Top-Selling Genres Overall (2000–2015)
+* Yearly Top Genre.
+  
+  
 
 
 
