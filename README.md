@@ -90,7 +90,8 @@ Revision/Addition Description and Link:
   Link: MP Tidyverse.Rmd
   
 * Revision/Addition Description and Link:
-
+ Shows the use of purrr package on nycflights13 dataset.
+ Link: https://github.com/acatlin/SPRING2025TIDYVERSE/blob/main/MP%20Tidyverse.Rmd
 
 
 # Mohammad C.
