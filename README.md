@@ -113,8 +113,15 @@ Visualization:To explore the data, I used ggplot2 to create the following visual
 # Mohammad C.
 
 * Initial Description and Link:
+* This vignette demonstrates how Plotly can animate plots to visualize the changes in game genres from 2000 to 2015, with options to play automatically or use a slider.
+  
 
 * Revision/Addition Description and Link:
+* Some descriptive analysis
+* Top-Selling Genres Overall (2000–2015)
+* Yearly Top Genre.
+  
+  
 
 
 
