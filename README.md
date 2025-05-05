@@ -43,6 +43,8 @@ Initial Description and Link:
 Revision/Addition Description and Link:
 * The following code shows a comparison of the voter registrations by year in each jurisdiction: 
 * Voter Registration Tidyverse Sample.Rmd
+* Jerald Melukkaran :  Added a percentage change plot that shows a map of United states colored with the corresponding percentage changing using  geom_sf from library sf. link: Voter-Registration-Tidyverse-Sample.html
+
 
 
 
