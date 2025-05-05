@@ -72,6 +72,7 @@ Revision/Addition Description and Link:
   * [https://github.com/Megabuster/Data607/blob/main/data/tidyverse/tidyverse_create.Rmd](https://github.com/Megabuster/Data607/blob/main/data/tidyverse/tidyverse_create.Rmd)
 
 * Revision/Addition Description and Link:
+* Extended Miraj's example. Shows the use of purrr package on nycflights13 dataset. Link: [https://github.com/acatlin/SPRING2025TIDYVERSE/blob/main/MP%20Tidyverse.Rmd](https://github.com/acatlin/SPRING2025TIDYVERSE/blob/main/MP%20Tidyverse.Rmd)
 
 
 
@@ -90,8 +91,6 @@ Revision/Addition Description and Link:
   Link: MP Tidyverse.Rmd
   
 * Revision/Addition Description and Link:
- Shows the use of purrr package on nycflights13 dataset.
- Link: https://github.com/acatlin/SPRING2025TIDYVERSE/blob/main/MP%20Tidyverse.Rmd
 
 
 # Mohammad C.
