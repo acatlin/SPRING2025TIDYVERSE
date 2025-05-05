@@ -97,10 +97,14 @@ Visualization:To explore the data, I used ggplot2 to create the following visual
 # Miraj P.
 
 * Initial Description and Link:
+
   Shows the use of lubridate package on nycflights13 dataset.
   Link: MP Tidyverse.Rmd
   
 * Revision/Addition Description and Link:
+
+  Extended Jerald's plotly vignette to include another example for animating graphs
+  Link: Jerald_Plotly Extended.Rmd
 
 
 
