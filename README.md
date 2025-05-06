@@ -13,7 +13,7 @@ Revision/Addition Description and Link:
 # Daniel D.
 
 * Initial Description and Link:
-
+Used global spice data to provided examples of some ggplot functions including making scatterplots and line graphs.
 * Revision/Addition Description and Link:
 Extended Jane Song's example to include plot organized by the change in voters with diverging color palette
 
