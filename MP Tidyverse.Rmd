@@ -18,9 +18,9 @@ In this vignette, we will use lubridate package from the Tidyverse to parse and 
 First, lets install and load the necessary libraries. 
 
 ```{r}
-install.packages("tidyverse")
-install.packages("lubridate")
-install.packages("nycflights13")
+# install.packages("tidyverse")
+# install.packages("lubridate")
+# install.packages("nycflights13")
 
 library(tidyverse)
 library(lubridate)
@@ -83,3 +83,30 @@ ggplot(average_delay, aes(x = day_of_week, y = average_delay)) +
 ##Conclusion
 
 In this vignette, we utilized the lubridate package to parse and manipulate date and time data in one of the nycflights13 dataset. We calculated departure delays and visualized the average delays by each day of the week. Using lubridate package made it easier to perfrom these analyses. 
+
+## Extending example with map2_dbl from purrr
+
+Let's operate on flights to see which carrier has the lowest median flight. This could tell us which carrier typically does not have flights outside of a small range.
+
+We will use `map2_dbl` from `purrr` for the example. There are many other ways to combine hours and minutes together into a consistent form, but this allows us to see the power of mapping functions in `purrr`. You can create short custom in-line functions using ~ in one of the map functions. Hour * 60 + minute is a simple calculation and is suited for this purpose. Afterwards, group the separate flights for each carrier together and find the median minutes for them. 
+
+```{r}
+flight_durations <- flights %>% 
+  mutate(
+    minutes = map2_dbl(hour, minute, ~(.x * 60 + .y))
+  ) %>%
+  select(carrier, minutes)
+
+carrier_median_duration <- flight_durations %>%
+  group_by(carrier) %>%
+  summarise(median = median(minutes))
+
+carrier_median_duration %>% 
+  ggplot(aes(carrier, median)) +
+  geom_col() +
+  theme_classic() +
+  labs(x = 'Carrier Code', y = 'Median Minutes', title = 'Median minutes per flight by carrier')
+  
+```
+
+In this example, HA or Hawaiian Airlines had the shortest flight duration. With further analysis we would likely find that HA flights likely are local to Hawaii while the other carriers are more likely to traverse different states.

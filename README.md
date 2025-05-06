@@ -74,6 +74,7 @@ Revision/Addition Description and Link:
   * [https://github.com/Megabuster/Data607/blob/main/data/tidyverse/tidyverse_create.Rmd](https://github.com/Megabuster/Data607/blob/main/data/tidyverse/tidyverse_create.Rmd)
 
 * Revision/Addition Description and Link:
+* Extended Miraj's example. Shows the use of purrr package on nycflights13 dataset. Link: [https://github.com/acatlin/SPRING2025TIDYVERSE/blob/main/MP%20Tidyverse.Rmd](https://github.com/acatlin/SPRING2025TIDYVERSE/blob/main/MP%20Tidyverse.Rmd)
 
 
 
@@ -107,7 +108,6 @@ Visualization:To explore the data, I used ggplot2 to create the following visual
 
   Extended Jerald's plotly vignette to include another example for animating graphs
   Link: Jerald_Plotly Extended.Rmd
-
 
 
 # Mohammad C.
