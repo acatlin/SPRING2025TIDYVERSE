@@ -114,11 +114,17 @@ Revision/Addition Description and Link:
 
 
 
-# Woodelyne D.
+# Woodelyne D
+## 
 
-* Initial Description and Link:
+*Student Depression Analysis 
 
-* Revision/Addition Description and Link:
+*show the use of `dplyr` and `ggplot2`
+for exploring mental health predictors in students
+using the Student Depression Dataset.
+
+* Vignette_student_depression.Rmd
+
 
 
 
